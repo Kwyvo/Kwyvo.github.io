@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Enzo Milic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ramaraja&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="project2.css">
+  <link rel="icon" type="image/png" href="img/">
+</head>
+
+  <body>
+
+   <header>    
+      <nav>
+        <div class="links">
+          <ul>
+              <li><a href="../index.html">Enzo MILIC</a></li>
+          </ul>                    
+          <ul>
+            <li><a href="../index.html">accueil</a></li>
+            <li><a href="../index.html#comp">compétences</a></li>
+            <li><a href="../index.html#projets">projets</a></li>
+            <li><a href="../index.html#contact">contact</a></li>
+          </ul>
+        </div>
+        <img src="../img/btn2.png" alt="hamburger" class="menu-hamburger">
+
+      </nav>
+    </header>
+
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger");
+        const navLinks = document.querySelector(".links");
+        const body = document.body;
+        const menuLinks = document.querySelectorAll(".links ul li a");
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu');
+        menuHamburger.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+        })
+
+        menuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+          navLinks.classList.remove('mobile-menu'); 
+          menuHamburger.classList.toggle('active');
+          body.classList.remove('no-scroll'); 
+          });
+        });
+
+    </script>
+
+
+
+    
+   <section class="project">
+
+        <div class="project-screen">
+            <img class="image" src="../img/reseau/res.avif" alt="reseau fond">
+            <div class="overlay"></div>
+            <h2> PROJET RESEAU</h2>
+        </div>
+
+        <div class="infos">
+            <h4 class="info">
+                <b> DUREE : </b> Fevrier 2025
+            </h4>
+
+            <h4 class="info">
+                <b> ROLE : </b> Configurateur de laboratoires réseau et de machines virtuelles sous Netkit-ng
+            </h4>
+
+             <h4 class="info"> 
+                <b>COLLABORATEURS : </b> ESTEVES Helder, HING Vibol & POLIN Ethan
+            </h4>
+
+            
+        </div>
+
+        <div class="desc">
+            <h4>
+                En Fevrier 2025 j’ai participé à la mise en place d’un environnement réseau virtualisé à l’aide de Netkit-ng (outil de simulation sur Linux). 
+                Le projet consistait à créer un laboratoire réseau composé de deux machines virtuelles configurées dans un même sous-réseau IP, capables de communiquer via des commandes comme ping ou curl.
+                L’une des machines hébergeait deux serveurs web (HTTP), et l’autre pouvait y accéder via des requêtes curl pour afficher le contenu des pages. 
+                Ce projet m’a permis de découvrir et d’apprendre les bases de la configuration réseau, du protocole HTTP et des outils de diagnostic réseau,
+                 en installant, configurant et testant des VM pour la première fois.
+            </h4>
+        </div>
+
+        <div class="skills">
+
+            <div class="category-skills">
+              <div class="skill-title">
+                  <h2>Outils</h2>
+              </div>
+              
+              <div class="skills-list">
+                  <button> Netkit-ng </button>
+                  <button> Terminal </button>
+                  <button> Linux </button>
+                  <button> VirtualBox </button>
+              </div>
+
+            </div>
+
+            <div class="category-skills">
+              <div class="skill-title">
+                  <h2>Hard Skills</h2>
+              </div>
+
+              <div class="skills-list">
+                  <button> Administration système Linux</button>
+                  <button> Bash</button>
+                  <button> Réseau</button>
+
+              </div>
+            </div>
+
+        </div>
+    </section>
+ 
+
+
+
+  <footer>
+    <p>© 2025 Enzo MILIC — Tous droits réservés.</p>
+  </footer>
+
+
+
+  </body>
+</html>
